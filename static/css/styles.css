@@ -1,0 +1,64 @@
+@property --beam-pos {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: -20%;
+}
+
+html {
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+}
+
+body {
+    color: #fff;
+    margin: 0px;
+}
+
+header {
+    width: 100%;
+    margin: 0px;
+    
+    border-bottom: 4px solid;
+    
+    border-image: linear-gradient(
+        to right, 
+        #ff1e1e 0%, 
+        #ff1e1e var(--beam-pos, -20%), 
+        #ffffff calc(var(--beam-pos, -20%) + 10%), 
+        #ff1e1e calc(var(--beam-pos, -20%) + 20%), 
+        #ff1e1e 100%
+    ) 1;
+
+    animation: moveBeam 2s linear infinite;
+}
+
+header div {
+    width: 100%;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+header h1 {
+    font-family: "MS Serif", "New York", "Times New Roman", serif;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 4rem;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    color: #ff1e1e;
+}
+
+@keyframes moveBeam {
+    0% {
+        --beam-pos: -20%;
+    }
+    100% {
+        --beam-pos: 100%;
+    }
+}
