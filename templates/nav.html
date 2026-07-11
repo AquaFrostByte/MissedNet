@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" type="text/css"/>
+        <link href="{{ url_for('static', filename='css/nav.css') }}" rel="stylesheet" type="text/css"/>
+        <link href="{{ url_for('static', filename='img/KAteEye.gif') }}" rel="icon" type="image/x-icon"/>
+    </head>
+    <body>
+        <header>
+            <div>
+                <img src="{{ url_for('static', filename='img/KAteEye.gif')}}">
+                <span class="title-group">
+                    <h1>Missed Network</h1>
+                    <span class="tiny-a"><a href="/">Hub</a></span>
+                </span>
+            </div>
+        </header>
+        <div id="main">
+            <nav class="sidebar">
+                <ul>
+                    <li><a href="#">Hub</a>
+                        <ul>
+                            <li><a href="/#Web">Websites</a></li>
+                            <li><a href="/#Games">Games</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">About</a>
+                        <ul>
+                            <li><a href="" data-page="about">About</a></li>
+                            <li><a href="" data-page="collab">Collaboration</a></li>
+                            <li><a href="" data-page="contact">Contact</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="content">
+                <div id="content-body"></div>
+            </div>
+        </div>
+    </body>
+
+    <script src="{{ url_for('static', filename='js/loader.js')}}"></script>
+</html>
